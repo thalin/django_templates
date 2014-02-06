@@ -12,7 +12,7 @@ INTERNAL_IPS = [
 ]
 
 INSTALLED_APPS += (
-    'debug_toolbar.apps.DebugToobarConfig',
+    'debug_toolbar.apps.DebugToolbarConfig',
 )
 
 MIDDLEWARE_CLASSES += (
@@ -31,3 +31,7 @@ DATABASES = {
         'NAME': os.path.join(BASE_DIR, 'development.sqlite3'),
     }
 }
+
+# django-debug-toolbar settings
+# https://django-debug-toolbar.readthedocs.org/en/latest/
+DEBUG_TOOLBAR_PATCH_SETTINGS = False
