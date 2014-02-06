@@ -10,4 +10,11 @@ ROOT_URLCONF = '{{ project_name }}.urls.production'
 
 WSGI_APPLICATION = '{{ project_name }}.wsgi.production.application'
 
-# Define your production DATABASES setting here.
+# Database
+# https://docs.djangoproject.com/en/{{ docs_version }}/ref/settings/#databases
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'production.sqlite3'),
+    }
+}
