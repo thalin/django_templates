@@ -2,6 +2,15 @@
 
 from .base import *
 
+DEBUG = True
+
+TEMPLATE_DEBUG = True
+
+INTERNAL_IPS = [
+    '127.0.0.1',
+    '::1'
+]
+
 INSTALLED_APPS += (
     'debug_toolbar',
 )
@@ -11,3 +20,5 @@ MIDDLEWARE_CLASSES += (
 )
 
 ROOT_URLCONF = '{{ project_name }}.urls.development'
+
+WSGI_APPLICATION = '{{ project_name }}.wsgi.development.application'
