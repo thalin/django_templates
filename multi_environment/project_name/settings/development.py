@@ -12,7 +12,7 @@ INTERNAL_IPS = [
 ]
 
 INSTALLED_APPS += (
-    'debug_toolbar',
+    'debug_toolbar.apps.DebugToobarConfig',
 )
 
 MIDDLEWARE_CLASSES += (
