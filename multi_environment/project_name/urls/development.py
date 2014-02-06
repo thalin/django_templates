@@ -1,7 +1,5 @@
 from .base import *
 
-from django.conf.urls import include, patterns, url
-
 import debug_toolbar
 
 urlpatterns += patterns('',
